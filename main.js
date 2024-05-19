@@ -1,93 +1,53 @@
-function addOne(num = 5){
-  return num + 1;
+const sun = (a, b) =>  a + b;
+console.log(sun(1, 3));
+
+const islegal = (age) => {
+  return age >= 15;
 }
+console.log(islegal(18));
 
-console.log(addOne(1));
-console.log(addOne());
+const islegal2 = (age) => age >= 15;
 
-function welcomeUser(name = "User"){
-  return `Hello ${name}`;
-}
-console.log(welcomeUser());
-console.log(welcomeUser("Ahmed Mo"));
+console.log(islegal2(18));
+const islegal3 = age => age >= 15;
 
-function sum(a = 0, b = 0){
-  return a + b;
-}
-console.log(sum(1, 5));
-console.log(sum(1));
-console.log(sum());
+console.log(islegal3(18));
 
-function logUser(userIds = []){
-  userIds.forEach(function(userId){
-    console.log(userId);
-  })
-};
-
-logUser([41, 44, 41]);
-
-const sum1 = function(a, b){
-  return a + b;
-};
-
-const sum2 = (a, b) => {
-  return a + b;
-};
-
-const triple = (value) => {
-  return value * 3;
-};
-
+const triple = value => value * 25;
 console.log(triple(5));
 
-const triple2 = function(value){
-  return value * 3;
-}
-console.log(triple2(5));
+const multiply = (a, b) => a * b;
+console.log(multiply(5, 5));
 
-const sumTr = (a) => {
-  return a * 3;
-};
-console.log(sumTr(4));
+const numbers = [9, 5, 14, 3, 11];
+const numbersAbersAboveten = numbers.filter(number => number > 10);
+;
 
-const grades = [18, 20];
-grades.forEach(function(grade){
-  console.log(grade)
+console.log(numbersAbersAboveten);
+
+const names = ["Sam", "Alex", "Charlie"];
+const result = names.find(function(name){
+  return name === "Alex";
 });
+console.log(result);
 
-grades.forEach((grade) => {
-  console.log(grade)
+const result2 = names.find(name => name === "Sam");
+console.log(result2);
+
+const numbers3 = [4, 2, 5, 8];
+const doubled = numbers3.map(function(number){
+  return number * 2;
 });
+console.log(doubled);
+const doubled2 = numbers3.map(number => number * 2);
+console.log(doubled2);
 
-grades.forEach(grade => {
-  console.log(grade)
-});
-
-const num = grades.filter(grade => {
-  return grade > 18;
-});
-console.log(num);
-
-const sumg = (grades) => {
-  let sum = 0;
-  grades.forEach(grade => {
-    sum += grade
-  });
-  return sum
-};
-
-console.log(sumg([10, 5, 15]));
-
-console.log(sumg([]));
-
-const gett = (temperatures) => {
-  return temperatures.filter(temperature => {
-    return temperature > 0;
+const get = Strings => {
+  return Strings.map(String => {
+    return String.length;
   })
 };
 
-console.log(gett([-5, 12, 3])); // [12, 3]
-
-
+console.log(get(["a", "abc"])); // [1, 3]
 
 
